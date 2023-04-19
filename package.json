@@ -104,5 +104,5 @@
       "^@config/(.*)$": "<rootDir>/../config/$1",
       "^@config": "<rootDir>/../config/"
     }
-  },
+  }
 }
