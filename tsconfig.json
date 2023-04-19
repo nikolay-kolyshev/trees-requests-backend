@@ -12,6 +12,7 @@
     "baseUrl": "./",
     "noFallthroughCasesInSwitch": false,
     "noImplicitOverride": true,
+    "esModuleInterop": "true",
     "paths": {
       "@/*": [
         "src/*"
