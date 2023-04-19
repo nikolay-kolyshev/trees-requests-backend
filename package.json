@@ -105,11 +105,4 @@
       "^@config": "<rootDir>/../config/"
     }
   },
-  "engineStrict": true,
-  "engines": {
-    "node": ">= 18.11.0",
-    "npm": "use-pnpm-instead-of-npm",
-    "yarn": "use-pnpm-instead-of-yarn",
-    "pnpm": ">= 8.1.1"
-  }
 }
