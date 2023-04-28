@@ -40,10 +40,8 @@ export class ImagesController {
     const file = await this.imagesService.getImageById(id);
     const stream = Readable.from(file.data);
     console.log(`inline; filename="${file.name}"`);
-    res.set({
-      'Content-Disposition': `inline; filename="${file.name}"`,
-      'Content-Type': 'image',
-    });
+    res.setHeader('Content-Disposition', `inline; filename="${file.name}"`);
+    res.setHeader('Content-Type', 'image');
     return new StreamableFile(stream);
   }
 
