@@ -16,7 +16,6 @@ import { ApiBearerAuth, ApiOperation } from '@nestjs/swagger';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { ImagesService } from '@/images/images.service';
 import { Readable } from 'stream';
-import { Response } from 'express';
 
 @Controller('images')
 export class ImagesController {
@@ -35,7 +34,7 @@ export class ImagesController {
   @Get('/:id')
   async getImageById(
     @Param('id', ParseIntPipe) id: number,
-    @Res({ passthrough: true }) res: Response,
+    @Res({ passthrough: true }) res: any,
   ) {
     const file = await this.imagesService.getImageById(id);
     const stream = Readable.from(file.data);
