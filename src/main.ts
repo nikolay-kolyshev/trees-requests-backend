@@ -1,7 +1,6 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { ConfigService } from '@nestjs/config';
-import * as cookieParser from 'cookie-parser';
 import {
   SwaggerModule,
   DocumentBuilder,
@@ -23,7 +22,6 @@ async function bootstrap() {
   /** [logger] set global context */
   logger.globalContext = LOGGER_CONTEXT;
   /** [app] cookie parser init */
-  app.use(cookieParser());
   /** [swagger] DocumentBuilder configuration */
   const config = new DocumentBuilder()
     .setTitle('Запросы на спасение деревьев')
