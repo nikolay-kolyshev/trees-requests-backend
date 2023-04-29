@@ -7,9 +7,6 @@ import { mapDependencyObjectsToModuleProviders } from '@/common/helpers/map-depe
 import { TreesRequestsSagas } from '@/trees-requests/event-bus/trees-requests.sagas';
 import { TreesRequestsQueries } from '@/trees-requests/query-bus/trees-requests.queries';
 import { TreesRequestsCommands } from '@/trees-requests/command-bus/trees-requests.commands';
-import { TreesRequestsEvents } from '@/trees-requests/event-bus/trees-requests.events';
-import { TreesRequestsLogCommands } from '@/trees-requests/command-bus/log/trees-requests.log.commands';
-import { TreesRequestsCommandLogHandlers } from '@/trees-requests/command-bus/log/trees-requests.log.command-handlers';
 import { TreesRequestEntity } from '@/trees-requests/entities/trees-request.entity';
 import { TreesRequestsQueryRepository } from '@/trees-requests/repositories/trees-requests.query-repository';
 import { TreesRequestsCommandRepository } from '@/trees-requests/repositories/trees-requests.command-repository';
@@ -36,9 +33,6 @@ import { ImageEntity } from '@/images/entities/image.entity';
       TreesRequestsCommands,
       TreesRequestsCommandHandlers,
       TreesRequestsQueries,
-      TreesRequestsEvents,
-      TreesRequestsLogCommands,
-      TreesRequestsCommandLogHandlers,
     ]),
   ],
   controllers: [TreesRequestsController],
