@@ -2,7 +2,6 @@ import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import configuration from '../config/configuration';
-import { LoggerModule } from '@/common/logger/logger.module';
 import { TreesRequestsModule } from '@/trees-requests/trees-requests.module';
 import { MulterModule } from '@nestjs/platform-express';
 import { ImagesModule } from './images/images.module';
@@ -34,7 +33,6 @@ import { join } from 'path';
     ServeStaticModule.forRoot({
       rootPath: join(__dirname, '..', 'files'),
     }),
-    LoggerModule,
     TreesRequestsModule,
     ImagesModule,
   ],
