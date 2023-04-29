@@ -1,6 +1,6 @@
 import { Column, Entity, JoinColumn, OneToOne } from 'typeorm';
-import { AbstractEntity } from '@/common/entities/abstract.entity';
-import { ImageEntity } from '@/images/entities/image.entity';
+import { AbstractEntity } from '../../common/entities/abstract.entity';
+import { ImageEntity } from '../../images/entities/image.entity';
 
 @Entity('trees-request')
 export class TreesRequestEntity extends AbstractEntity {

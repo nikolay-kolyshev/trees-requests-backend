@@ -2,10 +2,9 @@ import { CommandHandler, EventBus, ICommandHandler } from '@nestjs/cqrs';
 import {
   CreateTreesRequestCommand,
   DeleteTreesRequestByIdCommand,
-} from '@/trees-requests/command-bus/trees-requests.commands';
-import { InternalServerErrorException } from '@nestjs/common';
-import { TreesRequestsCommandRepository } from '@/trees-requests/repositories/trees-requests.command-repository';
-import { TreesRequestEntity } from '@/trees-requests/entities/trees-request.entity';
+} from './trees-requests.commands';
+import { TreesRequestEntity } from '../entities/trees-request.entity';
+import { TreesRequestsCommandRepository } from '../repositories/trees-requests.command-repository';
 import {
   CreateTreesRequestEvent,
   CreateTreesRequestFailEvent,
@@ -13,7 +12,8 @@ import {
   DeleteTreesRequestByIdEvent,
   DeleteTreesRequestByIdFailEvent,
   DeleteTreesRequestByIdSuccessEvent,
-} from '@/trees-requests/event-bus/trees-requests.events';
+} from '../event-bus/trees-requests.events';
+import { InternalServerErrorException } from '@nestjs/common';
 
 @CommandHandler(CreateTreesRequestCommand)
 class CreateTreesRequestCommandHandler

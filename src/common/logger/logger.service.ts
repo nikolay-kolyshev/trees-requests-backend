@@ -8,7 +8,7 @@ import {
   Context,
   GlobalContextSetter,
   LogWithContext,
-} from '@/common/logger/logger.decorators';
+} from './logger.decorators';
 import colors from 'colors';
 
 @Injectable({ scope: Scope.TRANSIENT })

@@ -1,5 +1,5 @@
-import { AbstractEntity } from '@/common/entities/abstract.entity';
-import { TreesRequestEntity } from '@/trees-requests/entities/trees-request.entity';
+import { TreesRequestEntity } from '../entities/trees-request.entity';
+import { AbstractEntity } from '../../common/entities/abstract.entity';
 
 export class TreesRequestsView extends AbstractEntity {
   name: string;

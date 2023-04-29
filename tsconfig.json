@@ -12,26 +12,6 @@
     "baseUrl": "./",
     "noFallthroughCasesInSwitch": false,
     "noImplicitOverride": true,
-    "esModuleInterop": true,
-    "paths": {
-      "@/*": [
-        "src/*"
-      ],
-      "@": [
-        "src"
-      ],
-      "@test/*": [
-        "test/*"
-      ],
-      "@test": [
-        "test"
-      ],
-      "@config/*": [
-        "test/*"
-      ],
-      "@config": [
-        "config"
-      ]
-    }
+    "esModuleInterop": true
   }
 }

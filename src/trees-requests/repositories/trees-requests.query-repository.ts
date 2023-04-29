@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { TreesRequestEntity } from '@/trees-requests/entities/trees-request.entity';
-import { TreesRequestsView } from '@/trees-requests/views/trees-requests.view';
+import { TreesRequestsView } from '../views/trees-requests.view';
+import { TreesRequestEntity } from '../entities/trees-request.entity';
 
 @Injectable()
 export class TreesRequestsQueryRepository {

@@ -8,7 +8,7 @@ import {
   DeleteTreesRequestByIdEvent,
   DeleteTreesRequestByIdFailEvent,
   DeleteTreesRequestByIdSuccessEvent,
-} from '@/trees-requests/event-bus/trees-requests.events';
+} from '../event-bus/trees-requests.events';
 import {
   CreateTreesRequestFailLogCommand,
   CreateTreesRequestLogCommand,
@@ -16,7 +16,7 @@ import {
   DeleteTreesRequestByIdFailLogCommand,
   DeleteTreesRequestByIdLogCommand,
   DeleteTreesRequestByIdSuccessLogCommand,
-} from '@/trees-requests/command-bus/log/trees-requests.log.commands';
+} from '../command-bus/log/trees-requests.log.commands';
 
 @Injectable()
 export class TreesRequestsSagas {

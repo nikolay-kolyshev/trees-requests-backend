@@ -10,11 +10,11 @@ import {
   UploadedFile,
   UseInterceptors,
 } from '@nestjs/common';
-import { TRESS_REQUESTS_API_TAG } from '@/trees-requests/trees-requests.constants';
-import { TreesRequestsService } from '@/trees-requests/trees-requests.service';
 import { ApiBearerAuth, ApiOperation, ApiTags } from '@nestjs/swagger';
-import { CreateTreesRequestDto } from '@/trees-requests/dto/create-trees-request.dto';
 import { FileInterceptor } from '@nestjs/platform-express';
+import { TRESS_REQUESTS_API_TAG } from './trees-requests.constants';
+import { TreesRequestsService } from './trees-requests.service';
+import { CreateTreesRequestDto } from './dto/create-trees-request.dto';
 
 @ApiTags(TRESS_REQUESTS_API_TAG)
 @Controller(TRESS_REQUESTS_API_TAG)

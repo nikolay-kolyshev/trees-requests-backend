@@ -1,6 +1,6 @@
-import { TreesRequestEntity } from '@/trees-requests/entities/trees-request.entity';
-import { CreateTreesRequestDto } from '@/trees-requests/dto/create-trees-request.dto';
 import { IEvent } from '@nestjs/cqrs';
+import { CreateTreesRequestDto } from '../dto/create-trees-request.dto';
+import { TreesRequestEntity } from '../entities/trees-request.entity';
 
 export class CreateTreesRequestEvent implements IEvent {
   constructor(public readonly dto: CreateTreesRequestDto) {}

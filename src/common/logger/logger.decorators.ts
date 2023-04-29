@@ -1,8 +1,8 @@
-import { LoggerService } from '@/common/logger/logger.service';
+import { LoggerService } from './logger.service';
 import {
   CONTEXT_PROPERTY_INDEX_METADATA_KEY,
   GLOBAL_CONTEXT_VALUE_METADATA_KEY,
-} from '@/common/logger/logger.symbols';
+} from './logger.symbols';
 import colors from 'colors';
 
 export const Context = (

@@ -1,4 +1,4 @@
-import { CreateTreesRequestDto } from '@/trees-requests/dto/create-trees-request.dto';
+import { CreateTreesRequestDto } from '../dto/create-trees-request.dto';
 import { ICommand } from '@nestjs/cqrs';
 
 export class CreateTreesRequestCommand implements ICommand {

@@ -3,10 +3,10 @@ import { InternalServerErrorException } from '@nestjs/common';
 import {
   GetAllTreesRequestsQuery,
   GetTreesRequestByIdQuery,
-} from '@/trees-requests/query-bus/trees-requests.queries';
-import { TreesRequestEntity } from '@/trees-requests/entities/trees-request.entity';
-import { TreesRequestsQueryRepository } from '@/trees-requests/repositories/trees-requests.query-repository';
-import { TreesRequestsView } from '@/trees-requests/views/trees-requests.view';
+} from './trees-requests.queries';
+import { TreesRequestsView } from '../views/trees-requests.view';
+import { TreesRequestsQueryRepository } from '../repositories/trees-requests.query-repository';
+import { TreesRequestEntity } from '../entities/trees-request.entity';
 
 @QueryHandler(GetAllTreesRequestsQuery)
 class GetAllCitiesQueryHandler

@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { TreesRequestEntity } from '@/trees-requests/entities/trees-request.entity';
-import { CreateTreesRequestDto } from '@/trees-requests/dto/create-trees-request.dto';
-import { ImageEntity } from '@/images/entities/image.entity';
+import { TreesRequestEntity } from '../entities/trees-request.entity';
+import { ImageEntity } from '../../images/entities/image.entity';
+import { CreateTreesRequestDto } from '../dto/create-trees-request.dto';
 
 @Injectable()
 export class TreesRequestsCommandRepository {

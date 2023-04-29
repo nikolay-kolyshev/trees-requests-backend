@@ -1,5 +1,4 @@
 import { CommandHandler, ICommandHandler } from '@nestjs/cqrs';
-import { LoggerService } from '@/common/logger/logger.service';
 import {
   CreateTreesRequestFailLogCommand,
   CreateTreesRequestLogCommand,
@@ -7,8 +6,9 @@ import {
   DeleteTreesRequestByIdFailLogCommand,
   DeleteTreesRequestByIdLogCommand,
   DeleteTreesRequestByIdSuccessLogCommand,
-} from '@/trees-requests/command-bus/log/trees-requests.log.commands';
-import { TREES_REQUESTS_LOGGER_CONTEXT_VALUE } from '@/trees-requests/trees-requests.constants';
+} from './trees-requests.log.commands';
+import { TREES_REQUESTS_LOGGER_CONTEXT_VALUE } from '../../trees-requests.constants';
+import { LoggerService } from '../../../common/logger/logger.service';
 
 @CommandHandler(CreateTreesRequestLogCommand)
 class CreateTreesRequestLogCommandHandler

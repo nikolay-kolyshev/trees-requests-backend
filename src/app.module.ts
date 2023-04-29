@@ -2,11 +2,12 @@ import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import configuration from '../config/configuration';
-import { TreesRequestsModule } from '@/trees-requests/trees-requests.module';
 import { MulterModule } from '@nestjs/platform-express';
 import { ImagesModule } from './images/images.module';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
+import { TreesRequestsModule } from './trees-requests/trees-requests.module';
+import { LoggerModule } from './common/logger/logger.module';
 
 @Module({
   imports: [
@@ -35,6 +36,7 @@ import { join } from 'path';
     }),
     TreesRequestsModule,
     ImagesModule,
+    LoggerModule,
   ],
 })
 export class AppModule {}

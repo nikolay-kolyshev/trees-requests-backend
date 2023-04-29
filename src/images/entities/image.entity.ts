@@ -1,7 +1,7 @@
 import { Column, Entity, OneToOne } from 'typeorm';
-import { AbstractEntity } from '@/common/entities/abstract.entity';
 import { Exclude } from 'class-transformer';
-import { TreesRequestEntity } from '@/trees-requests/entities/trees-request.entity';
+import { AbstractEntity } from '../../common/entities/abstract.entity';
+import { TreesRequestEntity } from '../../trees-requests/entities/trees-request.entity';
 
 @Entity('image')
 export class ImageEntity extends AbstractEntity {

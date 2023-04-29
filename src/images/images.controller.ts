@@ -14,8 +14,8 @@ import {
 } from '@nestjs/common';
 import { ApiBearerAuth, ApiOperation } from '@nestjs/swagger';
 import { FileInterceptor } from '@nestjs/platform-express';
-import { ImagesService } from '@/images/images.service';
 import { Readable } from 'stream';
+import { ImagesService } from './images.service';
 
 @Controller('images')
 export class ImagesController {

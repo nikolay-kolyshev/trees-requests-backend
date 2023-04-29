@@ -4,16 +4,16 @@ import {
   NotFoundException,
 } from '@nestjs/common';
 import { CommandBus, QueryBus } from '@nestjs/cqrs';
-import { CreateTreesRequestDto } from '@/trees-requests/dto/create-trees-request.dto';
+import { ImagesService } from '../images/images.service';
 import {
   GetAllTreesRequestsQuery,
   GetTreesRequestByIdQuery,
-} from '@/trees-requests/query-bus/trees-requests.queries';
+} from './query-bus/trees-requests.queries';
+import { CreateTreesRequestDto } from './dto/create-trees-request.dto';
 import {
   CreateTreesRequestCommand,
   DeleteTreesRequestByIdCommand,
-} from '@/trees-requests/command-bus/trees-requests.commands';
-import { ImagesService } from '@/images/images.service';
+} from './command-bus/trees-requests.commands';
 
 @Injectable()
 export class TreesRequestsService {

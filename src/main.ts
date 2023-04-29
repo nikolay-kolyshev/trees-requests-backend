@@ -6,7 +6,7 @@ import {
   DocumentBuilder,
   SwaggerDocumentOptions,
 } from '@nestjs/swagger';
-import { LoggerService } from '@/common/logger/logger.service';
+import { LoggerService } from './common/logger/logger.service';
 
 const LOGGER_CONTEXT = 'app';
 
