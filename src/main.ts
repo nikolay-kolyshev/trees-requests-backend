@@ -6,6 +6,9 @@ import {
   DocumentBuilder,
   SwaggerDocumentOptions,
 } from '@nestjs/swagger';
+import { LoggerService } from '@/common/logger/logger.service';
+
+const LOGGER_CONTEXT = 'app';
 
 async function bootstrap() {
   /** [app] init */
@@ -14,6 +17,10 @@ async function bootstrap() {
   app.enableCors({
     origin: true,
   });
+  /** [logger] init */
+  const logger = await app.resolve(LoggerService);
+  /** [logger] set global context */
+  logger.globalContext = LOGGER_CONTEXT;
   /** [app] cookie parser init */
   /** [swagger] DocumentBuilder configuration */
   const config = new DocumentBuilder()
@@ -33,6 +40,9 @@ async function bootstrap() {
   /** [config] get port */
   const PORT = +app.get(ConfigService).get('http.port') || 5000;
   /** [app] listening service */
-  await app.listen(PORT);
+  await app.listen(PORT, async () => {
+    logger.success(`Service listening on PORT = ${PORT}`);
+    logger.log(`Environment = ${process.env.NODE_ENV}`);
+  });
 }
 bootstrap();
