@@ -9,7 +9,7 @@ import {
   GlobalContextSetter,
   LogWithContext,
 } from '@/common/logger/logger.decorators';
-import * as colors from 'colors';
+import colors from 'colors';
 
 @Injectable({ scope: Scope.TRANSIENT })
 export class LoggerService extends ConsoleLogger implements IBaseLoggerService {

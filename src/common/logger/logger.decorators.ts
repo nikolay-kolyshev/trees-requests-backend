@@ -3,7 +3,7 @@ import {
   CONTEXT_PROPERTY_INDEX_METADATA_KEY,
   GLOBAL_CONTEXT_VALUE_METADATA_KEY,
 } from '@/common/logger/logger.symbols';
-import * as colors from 'colors';
+import colors from 'colors';
 
 export const Context = (
   target: LoggerService,
